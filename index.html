@@ -28,12 +28,26 @@
             z-index: 900;
         }
         
+        #attribution {
+            position: fixed;
+            display: block;
+            right: 0;
+            bottom: 0;
+            margin-right: 100px;
+            margin-bottom: 40px;
+            z-index: 900;
+        }
+        
         .tl-timeaxis-background {
             background-color: black;
         }
         
         .tl-slide-content-container {
             padding: 20px 0 20px 0 !important;
+        }
+        
+        .tl-attribution {
+            display: none;
         }
     </style>
 </head>
@@ -72,6 +86,10 @@
             <a href="https://github.com/BertrandTheHealer/sabaton-timeline/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color-text--white">Github</a>
             <div class="mdl-tooltip" data-mdl-for="view-source">
                 Visit Github page
+            </div>
+            <a href="https://timeline.knightlab.com/" target="_blank" id="attribution" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color-text--white">Github</a>
+            <div class="mdl-tooltip" data-mdl-for="view-source">
+                Made with TimelineJS
             </div>
         </main>
     </div>
