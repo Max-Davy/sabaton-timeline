@@ -26,6 +26,10 @@
             margin-bottom: 40px;
             z-index: 900;
         }
+        
+        #tl-timeaxis-background {
+            background-color: black;
+        }
     </style>
 </head>
 
@@ -78,6 +82,8 @@
             timenav_height: 250,
             hash_bookmark: true,
             use_bc: true,
+            timenav_position: 'top',
+            timenav_height_percentage: 25,
         }
         timeline = new TL.Timeline('timeline-embed',
             'https://docs.google.com/spreadsheets/d/1whefWkyloLSEsbOcMFVnk8gQsm-_4sGG037YaLZhLPc/', additionalOptions);
