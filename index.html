@@ -127,6 +127,21 @@
         };
         timeline = new TL.Timeline('timeline-embed',
             'https://docs.google.com/spreadsheets/d/1whefWkyloLSEsbOcMFVnk8gQsm-_4sGG037YaLZhLPc/', additionalOptions);
+
+        setInterval(updateScale, 1000);
+
+        function updateScale() {
+            var currentDate = timeline._timenav._markers.filter(obj => {
+                return obj.data.unique_id == timeline.current_id
+            })[0].data.start_date.data.year;
+            if (currentDate > 1900) {
+                timeline.setZoom(8)
+            } else if (currentDate > 1870) {
+                timeline.setZoom(4)
+            } else {
+                timeline.setZoom(2)
+            }
+        }
     </script>
 </body>
 
