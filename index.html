@@ -134,10 +134,10 @@
             var currentDate = timeline._timenav._markers.filter(obj => {
                 return obj.data.unique_id == timeline.current_id
             })[0].data.start_date.data.year;
-            if (currentDate > 1900) {
+            if (currentDate > 1877) {
                 timeline.setZoom(8)
-            } else if (currentDate > 1870) {
-                timeline.setZoom(4)
+            } else if (currentDate > 1611 && currentDate < 1719) {
+                timeline.setZoom(6)
             } else {
                 timeline.setZoom(2)
             }
