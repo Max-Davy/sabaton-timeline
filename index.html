@@ -67,6 +67,86 @@
         .tl-wikipedia-source {
             color: #b3b3b3;
         }
+        /*people*/
+        
+        #the-art-of-war-marker .tl-timemarker-content-container,
+        #ubreakable-marker .tl-timemarker-content-container,
+        #the-lion-from-the-north-marker .tl-timemarker-content-container,
+        #the-caroleans-prayer-marker .tl-timemarker-content-container,
+        #carolus-rex-marker .tl-timemarker-content-container,
+        #long-live-the-king-marker .tl-timemarker-content-container,
+        #_82nd-all-the-way-marker .tl-timemarker-content-container,
+        #seven-pillars-of-wisdom-marker .tl-timemarker-content-container,
+        #a-ghost-in-the-trenches-marker .tl-timemarker-content-container,
+        #the-red-baron-marker .tl-timemarker-content-container,
+        #far-from-the-fame-marker .tl-timemarker-content-container,
+        #inmate-4859-marker .tl-timemarker-content-container,
+        #white-death-marker .tl-timemarker-content-container,
+        #ballad-of-bull-marker .tl-timemarker-content-container,
+        #to-hell-and-back-marker .tl-timemarker-content-container,
+        #no-bullets-fly-marker .tl-timemarker-content-container,
+        #soldier-of-three-armies-marker .tl-timemarker-content-container {
+            background-color: lightgreen;
+        }
+        /*battles*/
+        
+        #sparta-marker .tl-timemarker-content-container,
+        #blood-of-bannockburn-marker .tl-timemarker-content-container,
+        #the-last-stand-marker .tl-timemarker-content-container,
+        #gott-mit-uns-marker .tl-timemarker-content-container,
+        #_1648-marker .tl-timemarker-content-container,
+        #winged-hussars-marker .tl-timemarker-content-container,
+        #killing-ground-marker .tl-timemarker-content-container,
+        #poltava-marker .tl-timemarker-content-container,
+        #shiroyama-marker .tl-timemarker-content-container,
+        #rorke’s-drift-marker .tl-timemarker-content-container,
+        #attack-of-the-dead-men-marker .tl-timemarker-content-container,
+        #fields-of-verdun-marker .tl-timemarker-content-container,
+        #the-future-of-warfare-marker .tl-timemarker-content-container,
+        #the-price-of-a-mile-marker .tl-timemarker-content-container,
+        #devil-dogs-marker .tl-timemarker-content-container,
+        #the-lost-battalion-marker .tl-timemarker-content-container,
+        #_40-1-marker .tl-timemarker-content-container,
+        #midway-marker .tl-timemarker-content-container,
+        #stalingrad-marker .tl-timemarker-content-container,
+        #saboteurs-marker .tl-timemarker-content-container. #panzerkampf-marker .tl-timemarker-content-container,
+        #union-marker .tl-timemarker-content-container,
+        #uprising-marker .tl-timemarker-content-container,
+        #last-dying-breath-marker .tl-timemarker-content-container,
+        #attero-dominatus-marker .tl-timemarker-content-container,
+        #the-last-battle-marker .tl-timemarker-content-container,
+        #nuclear-attack-marker .tl-timemarker-content-container,
+        #hill-3234-marker .tl-timemarker-content-container {
+            background: lightyellow;
+        }
+        /*groups*/
+        
+        #swedish-pagans-marker .tl-timemarker-content-container,
+        #purple-heart-marker .tl-timemarker-content-container,
+        #wehrmacht-marker .tl-timemarker-content-container,
+        #ghost-division-marker .tl-timemarker-content-container,
+        #resist-and-bite-marker .tl-timemarker-content-container,
+        #aces-in-exile-marker .tl-timemarker-content-container,
+        #night-witches-marker .tl-timemarker-content-container,
+        #wolfpack-marker .tl-timemarker-content-container,
+        #screaming-eagles-marker .tl-timemarker-content-container,
+        #smoking-snakes-marker .tl-timemarker-content-container,
+        #hearts-of-iron-marker .tl-timemarker-content-container,
+        #light-in-the-black-marker .tl-timemarker-content-container,
+        #in-the-name-of-god-marker .tl-timemarker-content-container {
+            background: lightblue;
+        }
+        /*other*/
+        
+        #burn-your-crosses-marker .tl-timemarker-content-container,
+        #ruina-imperii-marker .tl-timemarker-content-container,
+        #diary-of-an-unknown-soldier-marker .tl-timemarker-content-container,
+        #rise-of-evil-marker .tl-timemarker-content-container,
+        #the-final-solution-marker .tl-timemarker-content-container,
+        #primo-victoria-marker .tl-timemarker-content-container,
+        #into-the-fire-marker .tl-timemarker-content-container {
+            background: lightcoral;
+        }
     </style>
 </head>
 
@@ -127,21 +207,6 @@
         };
         timeline = new TL.Timeline('timeline-embed',
             'https://docs.google.com/spreadsheets/d/1whefWkyloLSEsbOcMFVnk8gQsm-_4sGG037YaLZhLPc/', additionalOptions);
-
-        setInterval(updateScale, 1000);
-
-        function updateScale() {
-            var currentDate = timeline._timenav._markers.filter(obj => {
-                return obj.data.unique_id == timeline.current_id
-            })[0].data.start_date.data.year;
-            if (currentDate > 1877) {
-                timeline.setZoom(8)
-            } else if (currentDate > 1611 && currentDate < 1719) {
-                timeline.setZoom(6)
-            } else {
-                timeline.setZoom(2)
-            }
-        }
     </script>
 </body>
 
