@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-indigo.min.css" />
-    <link rel="stylesheet" href="//styles.css">
+    <link rel="stylesheet" href="/styles.css">
 
     <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
     <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
@@ -71,40 +71,31 @@
 </head>
 
 <body>
-    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
-        <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800" style="background-color: #263238 !important;
-        color: white !important; position: fixed; z-index: 10">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <a role="button" tabindex="0" class="mdl-layout__drawer-button" href="https://max-davy.github.io"><i class="material-icons">home</i></a>
             <div class="mdl-layout__header-row">
-                <span class="mdl-layout-title">
-                    <a class="mdl-button mdl-js-button mdl-button--primary" style="font-size:20px; color:white;" href="https://max-davy.github.io/">Max Davy</a>&gt; <a class="mdl-button mdl-js-button mdl-button--primary" style="font-size:20px; color:white;" href="#">Sabaton Timeline</a>
-                </span>
-                <div class="mdl-layout-spacer"></div>
+                <span class="mdl-layout__title">Sabaton Timeline</span>
             </div>
         </header>
-        <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800" style="background-color: #263238 !important;
-        color: white !important;">
-            <div class="mdl-layout__header-row">
-                <span class="mdl-layout-title">Sabaton Timeline</span>
-                <div class="mdl-layout-spacer"></div>
-                <button class="mdl-button mdl-js-button mdl-button--primary" id="homebutton" onclick="window.location.href='https://max-davy.github.io/'">
-            <i href="https://max-davy.github.io/" onclick="window.location.href='https://max-davy.github.io/'" class="material-icons">home</i>
-          </button>
-                <div class="mdl-tooltip" data-mdl-for="homebutton">
-                    Max Davy homepage
-                </div>
-            </div>
-        </header>
-        <div class="demo-ribbon"></div>
-        <main class="demo-main mdl-layout__content" style="background-color: black;">
+        <main class="mdl-layout__content">
             <div id='timeline-embed' style="width: 100%; height: 600px; background-color: black;"></div>
-            <a href="https://github.com/Max-Davy/sabaton-timeline/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color-text--white">Github</a>
-            <div class="mdl-tooltip" data-mdl-for="view-source">
-                Visit Github page
-            </div>
-            <a href="https://timeline.knightlab.com/" target="_blank" id="attribution" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color-text--white">Timeline</a>
-            <div class="mdl-tooltip" data-mdl-for="attribution">
-                Made with TimelineJS
-            </div>
+            <footer class="mdl-mini-footer" style="margin-top: 100px">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">© 2020 Max Davy</div>
+                    <div class="mdl-logo">View source on <a href="https://github.com/max-davy/sabaton-timeline/" target="_blank">Github</a></div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li>Created using:</li>
+                        <li><a href="https://timeline.knightlab.com/" target=_blank>TimelineJS</a></li>
+                        <li><a href="https://pages.github.com" target=_blank>Github Pages</a></li>
+                        <li><a href="https://getmdl.io" target="_blank">Material Design Lite</a></li>
+                        <li><a href="https://www.gitkraken.com" target="_blank">GitKraken</a></li>
+                        <li><a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a></li>
+                    </ul>
+                </div>
+            </footer>
         </main>
     </div>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
