@@ -114,6 +114,10 @@
         };
         timeline = new TL.Timeline('timeline-embed',
             'https://docs.google.com/spreadsheets/d/1whefWkyloLSEsbOcMFVnk8gQsm-_4sGG037YaLZhLPc/', additionalOptions);
+        timeline.watch('current_id', (id, oldval, newval) => {
+            console.log('timeline.' + id + ' changed from ' + oldval + ' to ' + newval);
+            return newval;
+        });
     </script>
 </body>
 
