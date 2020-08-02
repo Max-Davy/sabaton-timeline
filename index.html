@@ -78,11 +78,24 @@
             height: 600px;
             height: 90vh;
             height: calc(100vh - 164px);
+            width: 100%;
+            background-color: black;
         }
         
         .mdl-mini-footer__left-section,
         .mdl-mini-footer__right-section {
                 max-height: 36px;
+        }
+        
+        .tl-storyslider {
+            height: calc(100vh - 349px);
+        }
+        
+        .tl-slidenav-next,
+        .tl-slidenav-previous {
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
         }
     </style>
 </head>
@@ -96,7 +109,7 @@
             </div>
         </header>
         <main class="mdl-layout__content">
-            <div id='timeline-embed' style="width: 100%; height: 600px; background-color: black;"></div>
+            <div id='timeline-embed'></div>
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
                     <div class="mdl-logo">© 2020 Max Davy</div>
@@ -129,7 +142,8 @@
             timenav_position: 'top',
             timenav_height_percentage: 25,
             scale_factor: 48,
-            zoom_sequence: [1, 4, 8, 16, 48, 120]
+            zoom_sequence: [1, 4, 8, 16, 48, 120],
+            height: 600px
         };
         timeline = new TL.Timeline('timeline-embed',
             'https://docs.google.com/spreadsheets/d/1whefWkyloLSEsbOcMFVnk8gQsm-_4sGG037YaLZhLPc/', additionalOptions);
